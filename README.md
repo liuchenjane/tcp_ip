@@ -7,5 +7,19 @@
 客户端与服务器建立连接并发送一条消息。<br>
 <br>
 
+
+```flow
+st=>start: 开始
+e=>end: 结束
+op=>operation: 我的操作
+cond=>condition: 确认？
+st->op->cond
+cond(yes)->e
+cond(no)->op
+```
+
+
 [TCP server实现](https://github.com/liuchenjane/tcp_ip/blob/master/tcp_ip/server.cpp) <br>
 [TCP client实现](https://github.com/liuchenjane/tcp_ip/blob/master/tcp_ip/client.cpp) <br>
+
+## 2.
