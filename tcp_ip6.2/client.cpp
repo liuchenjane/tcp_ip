@@ -11,11 +11,11 @@
 #define MAXLINE 4096
 
 int main(int argc, char ** argv){
-<<<<<<< HEAD
+
     int connfd,n;
-=======
+
 	int sockfd,n;
->>>>>>> 2e8c54fa387a5a1f1a9d27beadb703700ba5540d
+
 	char recvline[4096],sendline[4096];
 	struct sockaddr_in servaddr;
 
@@ -24,11 +24,7 @@ int main(int argc, char ** argv){
 		return 0;
 	}
 
-<<<<<<< HEAD
-	if( (connfd=socket(AF_INET,SOCK_STREAM,0))<0 ){
-=======
 	if( (sockfd=socket(AF_INET,SOCK_STREAM,0))<0 ){
->>>>>>> 2e8c54fa387a5a1f1a9d27beadb703700ba5540d
 		printf("create socket error: %s(errno: %d)\n",strerror(errno),errno);
 		return 0;
 	}
@@ -41,7 +37,6 @@ int main(int argc, char ** argv){
 		return 0;
 	}
 
-<<<<<<< HEAD
 	if( connect(connfd, (struct sockaddr*)&servaddr, sizeof(servaddr))<0 ){
 		printf("connect error: %s(errno: %d)\n",strerror(errno),errno);
 		return 0;
@@ -82,7 +77,6 @@ int main(int argc, char ** argv){
     close(connfd);
 
 
-=======
 	if( connect(sockfd, (struct sockaddr*)&servaddr, sizeof(servaddr))<0 ){
 		printf("connect error: %s(errno: %d)\n",strerror(errno),errno);
 		return 0;
@@ -95,6 +89,5 @@ int main(int argc, char ** argv){
 		return 0;
 	}
 	close(sockfd);
->>>>>>> 2e8c54fa387a5a1f1a9d27beadb703700ba5540d
 	return 0;
 }
