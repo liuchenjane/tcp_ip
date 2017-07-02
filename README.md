@@ -7,5 +7,5 @@
 客户端与服务器建立连接并发送一条消息。<br>
 <br>
 
-[TCP server实现](https://github.com/liuchenjane/tcp_ip/blob/master/server.cpp) <br>
-[TCP client实现](https://github.com/liuchenjane/tcp_ip/blob/master/client.cpp) <br>
+[TCP server实现](https://github.com/liuchenjane/tcp_ip/blob/master/tcp_ip/server.cpp) <br>
+[TCP client实现](https://github.com/liuchenjane/tcp_ip/blob/master/tcp_ip/client.cpp) <br>
