@@ -10,7 +10,11 @@
 #define MAXLINE 4096
 
 int main(int argc, char ** argv){
+<<<<<<< HEAD
     int listenfd,acceptfd;
+=======
+	int listenfd,connfd;
+>>>>>>> 2e8c54fa387a5a1f1a9d27beadb703700ba5540d
 	struct sockaddr_in servaddr;
 	char buff[4096];
 	int n;
@@ -36,6 +40,7 @@ int main(int argc, char ** argv){
 	}
 
 	printf("=================waiting for client's request=================\n");
+<<<<<<< HEAD
     if((acceptfd=accept(listenfd,(struct sockaddr*)NULL,NULL))==-1){
         printf("accept socket error: %s(errno: %d)",strerror(errno),errno);
     }
@@ -56,5 +61,18 @@ int main(int argc, char ** argv){
         return -1;
     }
     close(acceptfd);
+=======
+	while(1){
+		if( (connfd=accept(listenfd, (struct sockaddr*)NULL,NULL))==-1 ){
+			printf("accept socket error: %s(errno: %d)\n",strerror(errno),errno);
+			continue;
+		}
+		n=recv(connfd,buff,MAXLINE,0);
+		buff[n]='\0';
+		printf("recv msg from client: %s\n",buff);
+		close(connfd);
+	}
+	close(listenfd);
+>>>>>>> 2e8c54fa387a5a1f1a9d27beadb703700ba5540d
 	return 0;
 }
