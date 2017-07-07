@@ -1,5 +1,7 @@
-# tcp_ip
-循序渐进学习TCP网络编程
+# tcp_ip协议栈（网络进程间通信）
+循序渐进学习TCP网络编程<br>
+## 准备<br>
+[套接字及套接字接口函数](https://github.com/liuchenjane/tcp_ip/blob/master/%E5%A5%97%E6%8E%A5%E5%AD%97.md)<br>
 
 ## 1. 基本的TCP/IP服务器端和客户端<br>
 <br>
